@@ -26,7 +26,7 @@
 <h2 class="code-line" data-line-start=27 data-line-end=28 ><a id="Installation_27"></a>Installation</h2>
 <h3 class="code-line" data-line-start=29 data-line-end=30 ><a id="1_Clone_the_Repository_29"></a>1. Clone the Repository</h3>
 <pre><code class="has-line-data" data-line-start="32" data-line-end="35">git clone https://github.com/yourusername/ta-assesment.git
-cd currency-converter-mean
+cd ta-assesment
 </code></pre>
 <h3 class="code-line" data-line-start=35 data-line-end=36 ><a id="2_Setup_Environment_Variables_35"></a>2. Setup Environment Variables</h3>
 <p class="has-line-data" data-line-start="36" data-line-end="37">Create a .env file in the backend folder with the following content (adjust values as needed):</p>
