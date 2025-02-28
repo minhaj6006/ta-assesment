@@ -1,0 +1,53 @@
+# ========= Global =========
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm/
+
+# Environment files (keep sensitive data out of Git)
+.env
+.env.*.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ========= Angular Frontend =========
+# Angular build output
+/dist
+/tmp
+
+# Angular generated files
+.angular
+.angular-cache
+.idea/
+.vscode/
+
+# ========= Node/Express Backend =========
+# Compiled output
+/dist
+/build
+
+# TypeScript declaration files (if generated)
+*.d.ts
+
+# Optional: Local database or other local artifacts (if any)
+data/
