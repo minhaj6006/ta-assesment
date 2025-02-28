@@ -1,0 +1,45 @@
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-field {
+    flex: 1;
+}
+
+/* Dropdown fields will be small (200px) on larger screens */
+.small-dropdown {
+    flex: 0 0 200px;
+}
+
+.button-row {
+    margin-top: 20px;
+}
+
+/* Loader, result and error containers */
+.loader {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px;
+}
+.result,
+.error {
+    margin-top: 20px;
+}
+
+/* Responsive styles for mobile: make all fields full-width */
+@media (max-width: 600px) {
+
+    .form-field,
+    .small-dropdown {
+        flex: 1 1 100%;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,56 @@
+<mat-card class="mt-4">
+    <mat-card-title class="pl-2">Currency Converter</mat-card-title>
+    <mat-card-content>
+        <!-- Input Fields with Animation -->
+        <div [@fadeInOut]="isLoading ? 'hide' : 'show'">
+            <form (ngSubmit)="convert()">
+                <div class="form-row">
+                    <mat-form-field appearance="fill" class="form-field">
+                        <mat-label>From</mat-label>
+                        <mat-select [(ngModel)]="fromCurrency" name="fromCurrency">
+                            <mat-option *ngFor="let currency of currencies" [value]="currency">
+                                {{ currency }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="form-field">
+                        <mat-label>To</mat-label>
+                        <mat-select [(ngModel)]="toCurrency" name="toCurrency">
+                            <mat-option *ngFor="let currency of currencies" [value]="currency">
+                                {{ currency }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="form-field">
+                        <mat-label>Amount</mat-label>
+                        <input matInput type="text" [(ngModel)]="amount" name="amount" appThousandSeparator>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button color="primary" type="submit">
+                        Convert
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loader -->
+        <div *ngIf="isLoading" class="loader">
+            <mat-spinner></mat-spinner>
+        </div>
+
+        <!-- Display conversion result -->
+        <div *ngIf="convertedAmount !== null && !isLoading" class="result">
+            <h3>Converted Amount: {{ convertedAmount | number:'1.2-2' }}</h3>
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="error" class="error">
+            <mat-card>
+                <mat-card-content>
+                    <p style="color: red;">{{ error }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </mat-card-content>
+</mat-card>
