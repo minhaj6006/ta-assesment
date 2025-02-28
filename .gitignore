@@ -25,6 +25,7 @@ node_modules/
 # Environment files (keep sensitive data out of Git)
 .env
 .env.*.local
+backend.env
 
 # OS generated files
 .DS_Store
