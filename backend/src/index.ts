@@ -12,6 +12,4 @@ app.use(express.json());
 // Mount the conversion routes at /api
 app.use('/api', conversionRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+export default app
